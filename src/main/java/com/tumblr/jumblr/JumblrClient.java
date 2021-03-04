@@ -271,7 +271,7 @@ public class JumblrClient {
      */
     public String blogAvatar(String blogName, Integer size) {
         String pathExt = size == null ? "" : "/" + size.toString();
-        return requestBuilder.getRedirectUrl(JumblrClient.blogPath(blogName, "/avatar" + pathExt));
+        return "https://api.tumblr.com/v2/" + JumblrClient.blogPath(blogName, "/avatar" + pathExt);
     }
 
     public String blogAvatar(String blogName) { return this.blogAvatar(blogName, null); }
